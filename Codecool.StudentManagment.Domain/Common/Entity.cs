@@ -62,10 +62,10 @@
 
         public override int GetHashCode()
         {
-            return (GetRealType().ToString() + Id).GetHashCode();
+            return (GetRealType()?.ToString() + Id).GetHashCode();
         }
 
-        private Type GetRealType()
+        private Type? GetRealType()
         {
             Type type = GetType();
 

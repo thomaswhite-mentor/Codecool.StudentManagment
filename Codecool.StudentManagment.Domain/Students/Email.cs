@@ -39,7 +39,7 @@ namespace Codecool.StudentManagment.Domain.Students
             return email._value;
         }
 
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             if (obj is not Email email)
                 return false;

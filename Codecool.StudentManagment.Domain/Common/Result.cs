@@ -29,7 +29,7 @@
         }
         public static Result<T> Fail<T>(string message)
         {
-            return new Result<T>(false, message, default);
+            return new Result<T>(false, message);
         }
     }
     public class Result<T> : Result
@@ -39,6 +39,10 @@
         public Result(bool success, string errorMessage, T value) : base(success, errorMessage)
         {
             Value = value;
+        }
+        public Result(bool success, string errorMessage) : base(success, errorMessage)
+        {
+            Value = default;
         }
     }
 }

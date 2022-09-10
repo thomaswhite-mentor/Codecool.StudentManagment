@@ -35,9 +35,7 @@ namespace Codecool.StudentManagment.Domain.Students
 
         public override bool Equals(object? obj)
         {
-            StudentName studentName = obj as StudentName;
-
-            if (ReferenceEquals(studentName, null))
+            if (obj is not StudentName studentName)
                 return false;
 
             return _value == studentName._value;
